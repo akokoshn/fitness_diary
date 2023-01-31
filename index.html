@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fitness Dinary</title>
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/style.css" />
+
+	<!-- COLORS -->
+	<link rel="stylesheet" href="css/blue.css" title="blue"> <!-- DEFAULT COLOR/ CURRENTLY USING -->
+    <link rel="alternate stylesheet" href="css/green.css" title="green">
+	<link rel="alternate stylesheet" href="css/orange.css" title="orange">
+	<link rel="alternate stylesheet" href="css/purple.css" title="purple">
+	<link rel="alternate stylesheet" href="css/slate.css" title="slate">
+	<link rel="alternate stylesheet" href="css/yellow.css" title="yellow">
+	<link rel="alternate stylesheet" href="css/red.css" title="red">
+	<link rel="alternate stylesheet" href="css/blue-munsell.css" title="blue-munsell">
+
+	<!-- STYLE SWITCH STYLESHEET ONLY FOR DEMO -->
+	<link rel="stylesheet" href="css/demo.css">
+
+
+	
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.js"></script>
+    <![endif]-->
+	
+</head>
+<body onload="onBluetooth()">
+
+	<div id="st-preloader">
+		<div id="pre-status">
+			<div class="preload-placeholder"></div>
+		</div>
+	</div><!-- /#st-preloader -->
+
+	<section id="home-page">
+		<div class="container-fluid home-bg">
+			<div class="row">
+				<div class="col-md-12 text-center home-page">
+					<div class="main-logo">
+						<!-- <a href=""><img src="images/logo.png" alt="" /></a> -->
+					</div>
+					<h1 id="curr_day">DAY</h1>
+					<h2>Workout</h2>
+					<div class="row" id="workout_description">
+						<button type="button" class="btn btn-primary" onclick="openWorkout('body')" >Body</button>
+						<button type="button" class="btn btn-primary" onclick="openWorkout('cardio')" >Cardio</button>
+					</div>
+					<div class="connection_header" align="right" id="connections">
+						<h2 id="connected_device">no device connected</h2>
+						<img src="images/bluetooth.png" onclick="listBluetoothDevices()" width=20 height=20/>
+					</div>
+                    <div class="row">
+					<div class="col-sm-12 social-shear text-center">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+						<a href="#"><i class="fa fa-pinterest"></i></a>
+						<a href="#"><i class="fa fa-dribbble"></i></a>
+						<a href="#"><i class="fa fa-google-plus"></i></a>
+					</div><!-- /.social-shear -->
+                    </div>    
+				</div>
+			</div>
+		</div>
+	</section><!-- /#home-page -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<p>&copy; 2023 <strong></strong>. All Rights Reserved. Designed by <strong><a href="http://noname" target="_blank">NONAME</a></strong></p>
+				</div>
+			</div>
+		</div>
+	</footer><!-- /.footer -->
+	
+	<!-- JS -->
+	<script type="text/javascript" src="js/jquery.min.js"></script><!-- jQuery -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script><!-- Bootstrap -->
+	<script type="text/javascript" src="js/countdown.js"></script><!-- Countdown -->
+	<script type="text/javascript" src="js/jquery.ajaxchimp.js"></script><!-- ajaxchimp -->
+	<script type="text/javascript" src="js/scripts.js"></script><!-- Scripts -->
+	<script type="text/javascript" src="js/ble.js"></script><!-- Bluetooth -->
+	
+</body>
+</html>
